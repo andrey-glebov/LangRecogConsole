@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1360666199 source:/home/andrey/Projects/LangRecogConsole/main.cpp
+	<iostream>
+	"LanguageRecognizer.hpp"
+
+1360675003 /home/andrey/Projects/LangRecogConsole/LanguageRecognizer.hpp
+	<sndfile.h>
+	<cstdlib>
+	<fftw3.h>
+	<climits>
+	<cmath>
+	<cstring>
+
