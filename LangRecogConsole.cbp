@@ -32,6 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Linker>
+			<Add option="-lfftw3" />
+			<Add option="-lsndfile" />
+		</Linker>
+		<Unit filename="LanguageRecognizer.hpp" />
+		<Unit filename="RecogNeuralNet.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<envvars />

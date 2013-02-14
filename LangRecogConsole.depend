@@ -1,13 +1,19 @@
 # depslib dependency file v1.0
-1360666199 source:/home/andrey/Projects/LangRecogConsole/main.cpp
-	<iostream>
+1360874163 source:/home/andrey/Projects/LangRecogConsole/main.cpp
+	<cstdio>
 	"LanguageRecognizer.hpp"
 
-1360675003 /home/andrey/Projects/LangRecogConsole/LanguageRecognizer.hpp
+1360876916 /home/andrey/Projects/LangRecogConsole/LanguageRecognizer.hpp
 	<sndfile.h>
 	<cstdlib>
 	<fftw3.h>
 	<climits>
 	<cmath>
 	<cstring>
+	"RecogNeuralNet.hpp"
+
+1360877592 /home/andrey/Projects/LangRecogConsole/RecogNeuralNet.hpp
+	<cstdlib>
+	<ctime>
+	<string>
 

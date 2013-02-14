@@ -1,19 +1,20 @@
-#include <iostream>
+#include <cstdio>
 #include "LanguageRecognizer.hpp"
 
-using namespace std;
-
-LanguageRecognizer *Recognize = new LanguageRecognizer();
+char c = 'n';
+char file[] = "last.wav";
+char net[] = "net";
+LanguageRecognizer *Recognize = new LanguageRecognizer(net);
+int InNum, HiddenNum, OutNum;
 
 int main()
 {
-    char c = 'n';
-    char file[]="last.wav";
-
-    cout << "LangRecogConsole\n";
+    printf("LangRecogConsole\n");
     while(1){
-        cout << "> ";
-        cin >> c;
+        printf("> ");
+        do
+            c = getchar();
+        while(isspace(c));
         switch(c){
             case 'r':
                 Recognize->Record();
@@ -23,6 +24,18 @@ int main()
             break;
             case 'a':
                 Recognize->Analyze(file);
+            break;
+            case 't':
+                printf("Input sizes:\n");
+                scanf("%d%d%d", &InNum, &HiddenNum, &OutNum);
+                Recognize->Net->Reset(InNum, HiddenNum, OutNum);
+		        Recognize->Net->SaveToFile();
+            break;
+	        case 'l':
+                Recognize->Net->LoadFromFile();
+            break;
+            case 's':
+                Recognize->Net->SaveToFile();
             break;
         }
     }
